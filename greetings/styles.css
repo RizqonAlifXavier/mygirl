@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffcccb, #f0f8ff);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+textarea, button, input[type="range"] {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  width: 100%;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
+/* Garden styles */
+.garden {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  gap: 50px; /* Menambah jarak antar bunga */
+}
+
+.flower {
+  position: relative;
+  width: 100px; /* Ukuran bunga tulip yang lebih ramping */
+  height: 140px; /* Menyesuaikan tinggi bunga tulip */
+}
+
+.stem {
+  position: absolute;
+  bottom: -40px; /* Memastikan batang lebih panjang */
+  left: 50%;
+  width: 14px; /* Batang bunga tulip */
+  height: 150px; /* Batang lebih panjang */
+  background-color: green;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/* Kelopak Bunga Tulip */
+.petals {
+  position: absolute;
+  bottom: 10px; /* Posisi kelopak agar lebih mendekati batang */
+  left: 50%;
+  width: 80px; /* Lebar kelopak yang lebih sempit */
+  height: 100px; /* Tinggi kelopak */
+  background: #e57373; /* Warna merah muda tulip */
+  border-radius: 50% 50% 0 0; /* Membuat bentuk kelopak kuncup tulip */
+  transform: translateX(-50%) rotate(180deg); /* Membuat kelopak terbalik agar kuncup */
+}
+
+.petals::before,
+.petals::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  background: #e57373;
+  border-radius: 50% 50% 0 0;
+}
+
+.petals::before {
+  top: -30px; /* Posisi kelopak tambahan */
+  left: -40px; /* Agar kelopak terpisah */
+  transform: rotate(60deg);
+}
+
+.petals::after {
+  top: -30px; /* Posisi kelopak tambahan */
+  left: 40px; /* Agar kelopak terpisah */
+  transform: rotate(-60deg);
+}
+
+/* Pusat Bunga (Stigma) */
+.center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: yellow; /* Warna pusat bunga */
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* Kotak Pesan di bagian bawah halaman */
+.message-box {
+  display: none; /* Sembunyikan kotak pesan pada awal */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.message-box p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
